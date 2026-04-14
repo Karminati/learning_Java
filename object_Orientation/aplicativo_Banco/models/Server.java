@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class Server
 {
-    long id;
-    String password;
-    int aplicationRequests;
-    int aplicationStatus;
+    private long id;
+    private String password;
+    private int aplicationRequests;
+    private int aplicationStatus;
 
     Server(long id, String password, int aplicationStatus)
     {
