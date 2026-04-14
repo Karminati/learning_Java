@@ -12,4 +12,7 @@
  - I have been wanting to build a functioning server with Java for quite sometime now, the idea is to build, on another repository DW, some kind of RPG that accepts HTTP requests as a form of playing and finally sharing it with my friends to test it's playability
  - I will be making some annotations on here as i make some small observations and progress, so i will be putting the date at the end of each new insert ;)
 
+## First looks
+ - Believe it or not, i did not know how to do casting in java, simple as fuck :)
+
 *13/04/2026*
