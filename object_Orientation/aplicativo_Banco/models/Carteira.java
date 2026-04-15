@@ -15,19 +15,28 @@ class Carteira
         this.saldo = 0;
     }
 
-    public int getIdCarteira() {
+    public int getIdCarteira()
+    {
         return idCarteira;
     }
 
-    public int getIdUser() {
+    public int getIdUser()
+    {
         return idUser;
     }
 
-    public String getTipoCarteira() {
+    public String getTipoCarteira()
+    {
         return tipoCarteira;
     }
 
-    public void setTipoCarteira(String tipoCarteira) {
+    public double getSaldoCarteira()
+    {
+        return saldo;
+    }
+
+    public void setTipoCarteira(String tipoCarteira)
+    {
         this.tipoCarteira = tipoCarteira;
     }
 
@@ -41,6 +50,26 @@ class Carteira
         else
         {
             System.out.println("Voce nao pode depositar um valor nulo ou negativo!");
+        }
+    }
+
+
+    private void recebeValor(double valor)
+    {
+        this.saldo += valor;
+    }
+
+    public void transfereValor(Carteira recebedor, double valor)
+    {
+        if((this.saldo - valor) >= 0)
+        {
+            this.saldo -= valor;
+            recebedor.recebeValor(valor);
+            System.out.println("Valor transferido com sucesso");
+        }
+        else
+        {
+            System.out.println("Essa carteira nao possui saldo suficiente para realizar esta operacao");
         }
     }
     

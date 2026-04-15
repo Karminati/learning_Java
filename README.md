@@ -1,6 +1,6 @@
 # Learning Java
 ## What is this repository about?
- - This project will be my way of learning Java, a programming language i have always been passionate about but neve once tried to actually learn from the basics
+ - This project will be my way of learning Java, a programming language i have always been passionate about but never once tried to actually learn from the basics
 
 ## How will i be learning
  - I intend to be doing the basics from a book a professor once gave me called: 

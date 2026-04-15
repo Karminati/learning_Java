@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 class Server
@@ -6,12 +8,18 @@ class Server
     private String password;
     private int aplicationRequests;
     private int aplicationStatus;
+    private List<Conta> contasSistema;
+    private int nextIdConta;
+    private int nextIdCarteira;
 
     Server(long id, String password, int aplicationStatus)
     {
         this.id = id;
         this.password = password;
         this.aplicationStatus = aplicationStatus;
+        this.contasSistema = new ArrayList<>();
+        this.nextIdCarteira = 0;
+        this.nextIdConta = 0;
         if(aplicationStatus == 1)
         {
             this.aplicationRequests++;
@@ -55,16 +63,7 @@ class Server
                 }
                 else if(op == 1)
                 {
-                    System.out.println("Do you already have a user? (Y/n)");
-                    char confirm = scan.next().charAt(0);
-                    if(confirm == 'Y')
-                    {
-
-                    }
-                    else if(confirm == 'n')
-                    {
-
-                    }
+                    criaConta();
                 }
                 else if(op == 2)
                 {
@@ -84,4 +83,23 @@ class Server
             }
         }
     }
+
+    private void criaConta()
+    {
+        Scanner scan = new Scanner(System.in);
+        Conta nConta;
+        String cpf = scan.next();
+        String username = scan.next();
+        String senha = scan.next();
+        nConta = new Conta(this.nextIdConta, cpf, username, this.nextIdCarteira, senha);
+        scan.close();
+        this.contasSistema.add(nConta);
+    }
+
+    private void login()
+    {
+        
+    }
+
+
 }
